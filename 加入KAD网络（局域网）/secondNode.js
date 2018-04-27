@@ -13,7 +13,8 @@ process.on('unhandledRejection', (/*error*/) => {
 
 // Construct a kademlia node interface
 const node = new kadence.KademliaNode({
-  transport: new kadence.HTTPTransport(),
+  // transport: new kadence.HTTPTransport(),
+  transport: new kadence.UDPTransport(),
   storage: levelup(encoding(leveldown('./db/second'))),
   contact: { hostname: '192.168.1.119', port: 1337 }
 });

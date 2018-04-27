@@ -16,7 +16,8 @@ const {seedInfo, resourceKey} = require('./config');
 // Construct a kademlia node interface
 const node = new kadence.KademliaNode({
   identity: seedInfo.identity,
-  transport: new kadence.HTTPTransport(),
+  // transport: new kadence.HTTPTransport(),
+  transport: new kadence.UDPTransport(),
   storage: levelup(encoding(leveldown('./db_first'))),
   contact: seedInfo.contact
 });
