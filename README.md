@@ -106,7 +106,6 @@ const levelup = require('levelup');
 const leveldown = require('leveldown');
 const encoding = require('encoding-down');
 const kadence = require('@kadenceproject/kadence');
-const { Transform } = require('stream');
 const {seedInfo, resourceKey} = require('./config');
 
 // Construct a kademlia node interface
