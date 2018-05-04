@@ -4,7 +4,7 @@
 
 ## 存在的问题
 
-由于大多数用户的IP地址都是内网IP，如果要在公网中部署KAD网络，就要涉及到NAT地址转换，如果各计算机（假设不处于同一个局域网中）使用Kadence创建KAD网络节点（即KademliaNode类的对象）时传递的IP为内网ID，那么将节点之间将无法正常调用Kademlia协议中定义的RPC操作。暂时没有研究出来如何将处于不同局域网间的节点加入同一个KAD网络中，在GitHub有个repo给出了的如下代码可能和NAT转换有关：
+由于大多数用户的IP地址都是内网IP，如果要在公网中部署KAD网络，就要涉及到NAT地址转换，如果各计算机（假设不处于同一个局域网中）使用Kadence创建KAD网络节点（即KademliaNode类的对象）时传递的IP为内网ID，那么将节点之间将无法正常调用Kademlia协议中定义的RPC操作。暂时没有研究出来如何将处于不同内网之间的节点加入同一个KAD网络中，在GitHub有个repo给出了的如下代码可能和NAT转换有关：
 
 ```
 node.traverse = node.plugin(
